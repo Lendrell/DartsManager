@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="MyDartsManager.UserInterface.UserControls.Training.NewTrainingControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MyDartsManager.UserInterface.UserControls.Training"
+             mc:Ignorable="d"
+             Loaded="NewTrainingControl_Loaded">
+    <UserControl.Resources>
+        <CollectionViewSource x:Key="_playerViewSource"/>
+    </UserControl.Resources>
+    <Grid Background="{StaticResource BackgroundColor}">
+        <ComboBox Style="{StaticResource CustomComboBoxStyle}"  Name="playersCb" ItemsSource="{Binding Source={StaticResource _playerViewSource}}" DisplayMemberPath="Name" HorizontalAlignment="Left" Margin="10,19,0,0" VerticalAlignment="Top" Width="180" />
+        <Button Style="{StaticResource DartsButtonStyle}" Content="Cancel" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top" Click="cancelBtnClick"/>
+        <Button Name="selectBtn" Style="{StaticResource DartsButtonStyle}" Content="Select" HorizontalAlignment="Left" Margin="111,150,0,0" VerticalAlignment="Top" Click="selectBtnClick"/>
+
+        <CheckBox Name="combinedCb" Style="{StaticResource CustomCheckBoxStyle}" Content="Combined values" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,110,0,0" Checked="combinedCbChecked" Click="cbClicked"/>
+        <CheckBox Name="simpleCb"  Style="{StaticResource CustomCheckBoxStyle}" Content="Simple values" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,50,0,0" Checked="simpleCbChecked" Click="cbClicked"/>
+        <CheckBox Name="multiCb" Style="{StaticResource CustomCheckBoxStyle}" Content="Multiplier values" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,80,0,0" Checked="multiCbChecked" Click="cbClicked"/>
+    </Grid>
+</UserControl>

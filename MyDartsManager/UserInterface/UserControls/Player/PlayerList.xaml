@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="MyDartsManager.UserControls.PlayerList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MyDartsManager.UserControls"
+             mc:Ignorable="d" 
+             Loaded="PlayerList_Loaded">
+    <Grid Background="{StaticResource BackgroundColor}">
+        <Viewbox VerticalAlignment="Top" HorizontalAlignment="Left">
+        <Grid Background="{StaticResource BackgroundColor}">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <DataGrid Style="{StaticResource ColoredDataGridStyle}" x:Name="playersDataGrid" FontSize="40" MaxHeight="840" AutoGenerateColumns="False" Margin="10,10,10,350"/>
+                </ScrollViewer>
+                <Button Style="{StaticResource DartsButtonStyle}" Name="newPlayerBtn" Content="Create new player" FontSize="40" HorizontalAlignment="Left" Margin="10,930,10,10" VerticalAlignment="Top" Click="newPlayerBtnOnClick" Width="343"/>
+            <Button Style="{StaticResource DartsButtonStyle}" Name="backBtn" Content="Back to main menu" FontSize="40" HorizontalAlignment="Left" Margin="10,1000,10,150" VerticalAlignment="Top" Click="backBtnOnClick" />
+            <Button Style="{StaticResource DartsButtonStyle}" Name="deleteBtn" Content="Delete selected player" FontSize="40" HorizontalAlignment="Left" Margin="375,930,800,10" VerticalAlignment="Top" Click="deleteBtnOnClick" />
+
+        </Grid>
+    </Viewbox>
+    </Grid>
+
+</UserControl>

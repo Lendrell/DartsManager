@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="MyDartsManager.UserInterface.UserControls.Game.TrainingControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MyDartsManager.UserInterface.UserControls.Game"
+             mc:Ignorable="d">
+    <Grid Name="rootGrid" Background="{StaticResource BackgroundColor}">
+        <Grid Name="labelsGrid" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10,10,10,10">
+            <Label Style="{StaticResource ColoredLabelStyle}" Content="Target to hit:" FontSize="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10,10,120,10"/>
+            <Label Style="{StaticResource ColoredLabelStyle}" Content="Throws to hit:" FontSize="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10,210,120,10"/>
+            <Label Style="{StaticResource ColoredLabelStyle}" Content="Last target hit:" FontSize="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10,110,120,10"/>
+            <Label Style="{StaticResource ColoredLabelStyle}" Content="Average per target:" FontSize="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10,310,120,10"/>
+
+            <Label Style="{StaticResource ColoredLabelStyle}" Content="x" FontSize="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10,110,40,10"/>
+            <Label Name="hitValue" Style="{StaticResource ColoredLabelStyle}" Content="-" FontSize="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10,110,60,10"/>
+            <Label Name="hitMulti" Style="{StaticResource ColoredLabelStyle}" Content="-" FontSize="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10,110,20,10"/>
+
+            <Label Style="{StaticResource ColoredLabelStyle}" Content="x" FontSize="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10,10,40,10"/>
+            <Label Name="targetValueLabel" Style="{StaticResource ColoredLabelStyle}" Content="-" FontSize="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10,10,60,10"/>
+            <Label Name="targetMultiplierLabel" Style="{StaticResource ColoredLabelStyle}" Content="-" FontSize="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10,10,20,10"/>
+            <Label Name="throwCountLabel" Style="{StaticResource ColoredLabelStyle}" Content="0" FontSize="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10,210,60,10"/>
+            <Label Name="averageLabel" Style="{StaticResource ColoredLabelStyle}" Content="1" FontSize="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10,310,60,10"/>
+            <Button Style="{StaticResource DartsButtonStyle}" Name="revertButton" FontSize="20" Content="Revert throw" Margin="10,180,10,10" HorizontalAlignment="Right" VerticalAlignment="top" Click="revertBtnClick"/>
+        </Grid>
+
+        <Grid Name="buttonsGrid" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10,10,10,10">
+            <Button Style="{StaticResource DartsButtonStyle}" Name="cancelButton" FontSize="20" Content="Cancel training" Margin="10,10,10,10" HorizontalAlignment="Right" Click="cancelButtonClick"/>
+            <Button Style="{StaticResource DartsButtonStyle}" Name="endButton"  FontSize="20" Content="End training" Margin="10,10,150,10" HorizontalAlignment="Right" Click="endButtonClick"/>
+            <Button Style="{StaticResource DartsButtonStyle}" Name="speechButton"  FontSize="20" Content="Speech" Margin="10,10,10,100" HorizontalAlignment="Right" Click="speechButtonClick"/>
+            <Ellipse Name="speechCaptureCircle" HorizontalAlignment="Left" Fill="DarkRed" StrokeThickness="0" Height="20" Margin="155,14,0,0" Stroke="Black" VerticalAlignment="Top" Width="20"/>
+        </Grid>
+    </Grid>
+</UserControl>
